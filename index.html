@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .post-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .post {
+            flex: 1;
+            margin: 0 5px; /* Add margin for spacing between posts */
+        }
+        .post img {
+            max-width: 100%; /* Ensure images don't exceed the width of their container */
+            height: auto;
+        }
+        .report-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="i1.jpg" alt="Profile Image" class="profile-image">
+        <h1 class="bio">@Isabella_01</h1>
+        <p class="bio">Estoy muerta</p>
+
+        <div class="post-container">
+            <div class="post">
+                <img src="es.jpeg" alt="Post 1" width="200" height="200">
+            </div>
+            <div class="post">
+                <img src="photo-1606010728663-3ba3a483bee3.jpeg" alt="Post 2" width="200" height="200">
+            </div>
+            <div class="post">
+                <img src="nature-3151869_1280.jpg" alt="Post 3" class="post1" width="200" height="200">
+            </div>
+        </div>
+
+        <button class="report-button" onclick="reportProfile()">Report</button>
+    </div>
+
+    <script>
+        function reportProfile() {
+            window.location.href = "report.html";
+        }
+    </script>
+</body>
+</html>

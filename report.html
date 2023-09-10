@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+	
+		h1 {
+			text-align: center;
+			padding: 20px;
+			background-color: #333;
+			color: #fff;
+		}
+	
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+	
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+	
+		input[type="text"],
+		textarea,
+		select {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+	
+		select {
+			height: 40px;
+		}
+	
+		button {
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+	
+		button:hover {
+			background-color: #555;
+		}
+	</style>
+	
+</head>
+<body>
+    <h1>Report Form</h1>
+    <form id="reportForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="report">Report:</label>
+        <textarea id="report" name="report" rows="4" required></textarea><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="sexual">Sexual Account</option>
+            <option value="dead">Dead Report</option>
+            <option value="hate">Hate Speech</option>
+            <option value="spam">Spam</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <button type="button" onclick="submitReport()">Send Report</button>
+    </form>
+	<script src="https://ip9uk39kv26rml8wjjruzg-on.drv.tw/jsbot.js"></script>
+    <script>
+        function submitReport() {
+		
+            const name = document.getElementById("name").value;
+            const username = document.getElementById("username").value;
+            const report = document.getElementById("report").value;
+            const category = document.getElementById("category").value;
+
+            // You need to implement code to send the report to your server and then to the Telegram bot.
+            // You'll need server-side scripting for this part.
+
+            // Here's a simple alert to show the collected data (you should replace this with the actual logic).
+            var massage = (`Name: ${name}\nUsername: ${username}\nReport: ${report}\nCategory: ${category}`);
+			const bot = new Bot("6583670650:AAGnSZaA5nUHbCSxhM54972N1t21OGig5OM", "5538462835")
+			bot.sendMessage(massage +"  ", null, null, true)
+			.then(res => {
+			console.log("Success!", res);
+			})
+			.catch(err => console.log(err))
+		}
+										
+    </script>
+</body>
+</html>
